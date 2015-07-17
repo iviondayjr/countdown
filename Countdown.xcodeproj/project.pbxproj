@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E8BC7CB1B546427005A9D7F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8BC7CA1B546427005A9D7F /* AVFoundation.framework */; };
+		2E8BC7D91B54D27E005A9D7F /* eight.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7CE1B54D27E005A9D7F /* eight.wav */; };
+		2E8BC7DA1B54D27E005A9D7F /* five.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7CF1B54D27E005A9D7F /* five.wav */; };
+		2E8BC7DB1B54D27E005A9D7F /* four.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D01B54D27E005A9D7F /* four.wav */; };
+		2E8BC7DC1B54D27E005A9D7F /* nine.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D11B54D27E005A9D7F /* nine.wav */; };
+		2E8BC7DD1B54D27E005A9D7F /* one.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D21B54D27E005A9D7F /* one.wav */; };
+		2E8BC7DE1B54D27E005A9D7F /* seven.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D31B54D27E005A9D7F /* seven.wav */; };
+		2E8BC7DF1B54D27E005A9D7F /* six.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D41B54D27E005A9D7F /* six.wav */; };
+		2E8BC7E01B54D27E005A9D7F /* ten.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D51B54D27E005A9D7F /* ten.wav */; };
+		2E8BC7E11B54D27E005A9D7F /* three.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D61B54D27E005A9D7F /* three.wav */; };
+		2E8BC7E21B54D27E005A9D7F /* two.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D71B54D27E005A9D7F /* two.wav */; };
+		2E8BC7E31B54D27E005A9D7F /* zero.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BC7D81B54D27E005A9D7F /* zero.wav */; };
 		2EFC10531B45840E006D0531 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC10521B45840E006D0531 /* main.m */; };
 		2EFC10561B45840E006D0531 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC10551B45840E006D0531 /* AppDelegate.m */; };
 		2EFC10591B45840E006D0531 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC10581B45840E006D0531 /* ViewController.m */; };
@@ -27,6 +39,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E8BC7CA1B546427005A9D7F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2E8BC7CE1B54D27E005A9D7F /* eight.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eight.wav; sourceTree = "<group>"; };
+		2E8BC7CF1B54D27E005A9D7F /* five.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = five.wav; sourceTree = "<group>"; };
+		2E8BC7D01B54D27E005A9D7F /* four.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = four.wav; sourceTree = "<group>"; };
+		2E8BC7D11B54D27E005A9D7F /* nine.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nine.wav; sourceTree = "<group>"; };
+		2E8BC7D21B54D27E005A9D7F /* one.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = one.wav; sourceTree = "<group>"; };
+		2E8BC7D31B54D27E005A9D7F /* seven.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = seven.wav; sourceTree = "<group>"; };
+		2E8BC7D41B54D27E005A9D7F /* six.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = six.wav; sourceTree = "<group>"; };
+		2E8BC7D51B54D27E005A9D7F /* ten.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ten.wav; sourceTree = "<group>"; };
+		2E8BC7D61B54D27E005A9D7F /* three.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = three.wav; sourceTree = "<group>"; };
+		2E8BC7D71B54D27E005A9D7F /* two.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = two.wav; sourceTree = "<group>"; };
+		2E8BC7D81B54D27E005A9D7F /* zero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zero.wav; sourceTree = "<group>"; };
 		2EFC104D1B45840E006D0531 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EFC10511B45840E006D0531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EFC10521B45840E006D0531 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8BC7CB1B546427005A9D7F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 		2EFC10441B45840E006D0531 = {
 			isa = PBXGroup;
 			children = (
+				2E8BC7CA1B546427005A9D7F /* AVFoundation.framework */,
 				2EFC104F1B45840E006D0531 /* Countdown */,
 				2EFC10691B45840E006D0531 /* CountdownTests */,
 				2EFC104E1B45840E006D0531 /* Products */,
@@ -81,6 +107,17 @@
 		2EFC104F1B45840E006D0531 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
+				2E8BC7CE1B54D27E005A9D7F /* eight.wav */,
+				2E8BC7CF1B54D27E005A9D7F /* five.wav */,
+				2E8BC7D01B54D27E005A9D7F /* four.wav */,
+				2E8BC7D11B54D27E005A9D7F /* nine.wav */,
+				2E8BC7D21B54D27E005A9D7F /* one.wav */,
+				2E8BC7D31B54D27E005A9D7F /* seven.wav */,
+				2E8BC7D41B54D27E005A9D7F /* six.wav */,
+				2E8BC7D51B54D27E005A9D7F /* ten.wav */,
+				2E8BC7D61B54D27E005A9D7F /* three.wav */,
+				2E8BC7D71B54D27E005A9D7F /* two.wav */,
+				2E8BC7D81B54D27E005A9D7F /* zero.wav */,
 				2EFC10541B45840E006D0531 /* AppDelegate.h */,
 				2EFC10551B45840E006D0531 /* AppDelegate.m */,
 				2EFC10571B45840E006D0531 /* ViewController.h */,
@@ -163,11 +200,12 @@
 		2EFC10451B45840E006D0531 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Patrick Montag";
 				TargetAttributes = {
 					2EFC104C1B45840E006D0531 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = TBB8RNGD54;
 					};
 					2EFC10651B45840E006D0531 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -199,8 +237,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8BC7E31B54D27E005A9D7F /* zero.wav in Resources */,
+				2E8BC7DE1B54D27E005A9D7F /* seven.wav in Resources */,
+				2E8BC7E11B54D27E005A9D7F /* three.wav in Resources */,
+				2E8BC7DB1B54D27E005A9D7F /* four.wav in Resources */,
+				2E8BC7DA1B54D27E005A9D7F /* five.wav in Resources */,
 				2EFC105C1B45840E006D0531 /* Main.storyboard in Resources */,
+				2E8BC7DD1B54D27E005A9D7F /* one.wav in Resources */,
+				2E8BC7E01B54D27E005A9D7F /* ten.wav in Resources */,
 				2EFC10611B45840E006D0531 /* LaunchScreen.xib in Resources */,
+				2E8BC7D91B54D27E005A9D7F /* eight.wav in Resources */,
+				2E8BC7DF1B54D27E005A9D7F /* six.wav in Resources */,
+				2E8BC7E21B54D27E005A9D7F /* two.wav in Resources */,
+				2E8BC7DC1B54D27E005A9D7F /* nine.wav in Resources */,
 				2EFC105E1B45840E006D0531 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +333,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -349,9 +399,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tutorial.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +413,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Countdown/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tutorial.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -379,6 +437,7 @@
 				);
 				INFOPLIST_FILE = CountdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tutorial.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countdown.app/Countdown";
 			};
@@ -394,6 +453,7 @@
 				);
 				INFOPLIST_FILE = CountdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tutorial.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Countdown.app/Countdown";
 			};
@@ -418,6 +478,7 @@
 				2EFC10721B45840E006D0531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EFC10731B45840E006D0531 /* Build configuration list for PBXNativeTarget "CountdownTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +487,7 @@
 				2EFC10751B45840E006D0531 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

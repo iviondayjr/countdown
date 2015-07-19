@@ -26,6 +26,13 @@
 }
 @end
 
+@implementation CALayer (Additions)
+- (void)setBorderColorFromUIColor:(UIColor *)color
+{
+    self.borderColor = color.CGColor;
+}
+@end
+
 @implementation ViewController
 
 // add 30 seconds button

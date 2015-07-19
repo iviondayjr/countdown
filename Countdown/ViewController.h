@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
+@property(nonatomic, assign) UIColor* borderUIColor;
+
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *clockLabel;
 @property (weak, nonatomic) IBOutlet UILabel *destinationLabel;

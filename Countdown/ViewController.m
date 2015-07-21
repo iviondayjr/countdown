@@ -23,77 +23,36 @@
     AVAudioPlayer *_zero;
     
     NSString *openString;
-    NSDateFormatter *formatter;
+    NSString *countdownString;
+    NSString *clockString;
+    
+    NSDateFormatter *dateFormatter;
+    NSDateFormatter *targetFormatter;
+    
+    NSDate *date;
+    NSString *dateString;
+    
+    NSDate *morningGrainLockDate;
+    NSString *morningGrainLockString;
+    
+    NSDate *nightGrainLockDate;
+    NSString *nightGrainLockString;
+    
+    NSDate *targetDate;
+
+    NSCalendar *calendar;
+    NSDateComponents *components;
 }
 @end
 
-@implementation CALayer (Additions)
-- (void)setBorderColorFromUIColor:(UIColor *)color
-{
-    self.borderColor = color.CGColor;
-}
-@end
+//@implementation CALayer (Additions)
+//- (void)setBorderColorFromUIColor:(UIColor *)color
+//{
+//    self.borderColor = color.CGColor;
+//}
+//@end
 
 @implementation ViewController
-
-// add 30 seconds button
-- (IBAction)addSeconds:(id)sender {
-    self.textField.text = openString;
-    NSLog( @"%@", openString);
-}
-
--(void)updateClockLabel {
-    
-    if ([self.countdownLabel.text isEqualToString:@"-10.00"]) {
-        [_ten play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-9.00"]) {
-        [_nine play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-8.00"]) {
-        [_eight play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-7.00"]) {
-        [_seven play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-6.00"]) {
-        [_six play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-5.00"]) {
-        [_five play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-4.00"]) {
-        [_four play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-3.00"]) {
-        [_three play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-2.00"]) {
-        [_two play];
-    } else if ([self.countdownLabel.text isEqualToString:@"-1.00"]) {
-        [_one play];
-    } else if ([self.countdownLabel.text isEqualToString:@"0.00"]) {
-        [_zero play];
-    }
-    
-    self.destinationLabel.text = self.textField.text;
-    
-    // create formatter to display dates how we want
-    [formatter setDateFormat:@"EEE, yyyy-MM-dd HH:mm:ss"];
-    
-    NSString *clockString = [formatter stringFromDate:[NSDate date]];
-    
-    self.clockLabel.text = clockString;
-    
-    // create date object from user input
-    NSDate *destinationDate = [formatter dateFromString:self.textField.text];
-    
-    // create date 30 seconds ahead
-    NSDate *openTime = [destinationDate dateByAddingTimeInterval:30];
-    
-    openString = [formatter stringFromDate:openTime];
-    
-    // calculate difference in times
-    NSTimeInterval diff = [[NSDate date] timeIntervalSinceDate:destinationDate];
-    
-    // convert double back to string to display
-    NSString *countdownString = [NSString stringWithFormat:@"%.2f", diff];
-    self.countdownLabel.text = countdownString;
-    
-    [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:0.0001];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -144,17 +103,105 @@
     NSURL *soundZero = [NSURL fileURLWithPath:pathZero];
     _zero = [[AVAudioPlayer alloc] initWithContentsOfURL:soundZero error:nil];
     
+    date = [NSDate date];
+    
     // display todays date in the input field
-    formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEE, yyyy-MM-dd HH:mm:ss"];
+    dateFormatter = [[NSDateFormatter alloc] init];
     
-    NSDate *todaysDate = [NSDate date];
-    NSString *todaysString = [formatter stringFromDate:todaysDate];
+    targetFormatter = [[NSDateFormatter alloc] init];
+    [targetFormatter setDateFormat:@"EEE, MMMM dd, yyyy, HH:mm:ss"];
     
-    self.textField.text = todaysString;
+    calendar = [NSCalendar currentCalendar];
+    components = [calendar components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond) fromDate:date];
+    
+    NSCalendarOptions options = NSCalendarMatchNextTime;
+    morningGrainLockDate = [calendar nextDateAfterDate:date
+                                          matchingHour:8
+                                                minute:29
+                                                second:30
+                                               options:options];
+    morningGrainLockString = [targetFormatter stringFromDate:morningGrainLockDate];
+    
+    nightGrainLockDate = [calendar nextDateAfterDate:date
+                                          matchingHour:18
+                                                minute:59
+                                                second:30
+                                               options:options];
+    nightGrainLockString = [targetFormatter stringFromDate:nightGrainLockDate];
+        
+    dateString = [targetFormatter stringFromDate:date];
+    
+    if ([date timeIntervalSinceDate:morningGrainLockDate] < 0) {
+        self.textField.text = nightGrainLockString;
+    } else if ([date timeIntervalSinceDate:nightGrainLockDate] < 0) {
+        self.textField.text = morningGrainLockString;
+    }
     
     [self updateClockLabel];
     // stuff
+}
+
+-(void)updateClockLabel {
+    
+    if ([self.countdownLabel.text isEqualToString:@"-10.0"]) {
+        [_ten play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-9.0"]) {
+        [_nine play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-8.0"]) {
+        [_eight play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-7.0"]) {
+        [_seven play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-6.0"]) {
+        [_six play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-5.0"]) {
+        [_five play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-4.0"]) {
+        [_four play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-3.0"]) {
+        [_three play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-2.0"]) {
+        [_two play];
+    } else if ([self.countdownLabel.text isEqualToString:@"-1.0"]) {
+        [_one play];
+    } else if ([self.countdownLabel.text isEqualToString:@"0.0"]) {
+        [_zero play];
+    }
+    
+//    self.destinationLabel.text = self.textField.text;
+    
+    // create formatter to display dates how we want
+    [dateFormatter setDateFormat:@"HH:mm:ss"];
+    
+    clockString = [dateFormatter stringFromDate:[NSDate date]];
+    
+    self.clockLabel.text = clockString;
+    
+    // create date object from user input
+    targetDate = [targetFormatter dateFromString:self.textField.text];
+    
+    // create date 30 seconds ahead
+    NSDate *openTime = [targetDate dateByAddingTimeInterval:30];
+    
+    openString = [targetFormatter stringFromDate:openTime];
+    
+    // calculate difference in times
+    NSTimeInterval diff = [[NSDate date] timeIntervalSinceDate:targetDate];
+    
+    // convert double back to string to display
+    countdownString = [NSString stringWithFormat:@"%.1f", diff];
+    
+    self.countdownLabel.text = countdownString;
+    
+    [self performSelector:@selector(updateClockLabel) withObject:self afterDelay:0.01];
+}
+
+// add 30 seconds button
+- (IBAction)addSeconds:(id)sender {
+    self.textField.text = openString;
+    
+    NSLog( @"%@", morningGrainLockDate);
+    NSLog( @"%@", nightGrainLockDate);
+    NSLog( @"%@", date);
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {

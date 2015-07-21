@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "0000.0"; ObjectID = "4PV-4B-zHO"; */
+"4PV-4B-zHO.text" = "0000.0";
+
+/* Class = "UITextField"; text = "Mon, July 20, 2015, 12:00:00"; ObjectID = "OOe-6r-QVm"; */
+"OOe-6r-QVm.text" = "Mon, July 20, 2015, 12:00:00";
+
+/* Class = "UILabel"; text = "00:00:00"; ObjectID = "Xcn-ZK-RDw"; */
+"Xcn-ZK-RDw.text" = "00:00:00";
+
+/* Class = "UINavigationItem"; title = "Countdown"; ObjectID = "ajm-km-flV"; */
+"ajm-km-flV.title" = "Countdown";
+
+/* Class = "UIButton"; normalTitle = "+0:30"; ObjectID = "yfp-ko-HyM"; */
+"yfp-ko-HyM.normalTitle" = "+0:30";
